@@ -32,7 +32,6 @@ def is_safe(numbers):
     for i in range(1, len(numbers)):
         actual = numbers[i] - numbers[i - 1]
         if not actual * prev >= 0 or abs(numbers[i] - numbers[i - 1]) not in range(1, 4):
-            unsafe_index = i
             break
 
         prev = actual
